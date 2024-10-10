@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  src: "./fonts/PlusJakartaSans-VariableFont_wght.ttf",
+  variable: "--font-plus-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
