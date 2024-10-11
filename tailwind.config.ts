@@ -28,7 +28,7 @@ const config: Config = {
         'right': '10px 10px 25px rgba(0, 0, 0, 0.5)', // Darker shadow with increased blur and opacity
       },
       colors: {
-        background: "var(--background)",
+        background: "var(--background",
         foreground: "var(--foreground)",
       },
     },
