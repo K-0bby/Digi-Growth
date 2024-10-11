@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import CountUp from "react-countup";
 import Image from "next/image";
 import Link from "next/link";
+import ArrowCard from "@/components/ArrowCard";
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       
       {/* Hero section */}
       <section className="bg-[#1f1f1f] min-h-screen px-4 sm:px-8 py-10 relative">
-        <div className="flex flex-col xl:flex-row items-center justify-around gap-10 mt-5">
+        <div className="flex flex-col xl:flex-row items-center justify-around gap-10 xl:mt-12">
           <div className="text-center xl:text-left">
             <h1 className="font-bold font-primary text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl xl:w-[700px] xl:leading-[70px]">
               Empower Your <br /> Business with Digital Excellence
@@ -78,6 +79,35 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <div className="grid grid-cols-1 xl:grid-cols-3 px-4 mt-36 gap-10">
+        <ArrowCard
+          title="Tailored Strategies"
+          description="We create customized digital marketing strategies that align with your unique business objectives. By taking the time to understand your brand and audience, we develop targeted solutions that drive meaningful engagement and growth."
+          bgColor="bg-[#E2E2E2]"
+          textColor="text-[#000000]"
+          borderColor="border-black"
+        />
+        <ArrowCard
+          title="Proven Results"
+          description="Our approach is results-driven. We’ve helped businesses across various industries achieve significant growth and ROI through our innovative digital solutions. With DigiGrowth Pro, you can trust that your investment will lead to measurable success."
+          bgColor="bg-[#1B1D20]"
+          textColor="text-white"
+          borderColor="border-white"
+          className="xl:transform xl:translate-y-[-40px] shadow-none"
+          disableArrow={true}
+        />
+        <ArrowCard
+          title="Expert Team"
+          description="Our team comprises industry professionals with years of experience in digital marketing, SEO, content creation, and more. We leverage this expertise to deliver strategies that are not only cutting-edge but also effective in achieving your business goals."
+          bgColor="bg-[#E2E2E2]"
+          textColor="text-[#000000]"
+          borderColor="border-black"
+        />
+        </div>
+      </section>
+      
+      <section>
+
       </section>
     </main>
   );
