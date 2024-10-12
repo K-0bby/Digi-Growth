@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ArrowCard from "@/components/ArrowCard";
 import { ArrowRight } from "lucide-react";
+import TestimonialCarousel from "@/components/Testimonial";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 export default function Home() {
   return (
@@ -233,6 +235,170 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* testimonial section */}
+      <TestimonialCarousel />
+
+      {/* footer */}
+      <footer className="bg-[#1f1f1f] text-white py-12 rounded-t-3xl px-4 sm:px-8 xl:px-20">
+        {/* Company Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-around mb-8 pb-8 border-b border-gray-700">
+          <h2 className="text-5xl font-bold font-primary">DigiGrowth</h2>
+          <p className="mt-4 text-sm lg:w-1/4 font-secondary leading-6 text-center lg:text-left">
+            Unlock your business full potential with tailored digital strategies
+            that drive growth, enhance visibility, and deliver measurable
+            results.
+          </p>
+        </div>
+    
+        <div className="container mx-auto px-4 xl:px-24 grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Links Section */}
+          <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Company */}
+            <div>
+              <h3 className="font-semibold mb-4 text-xl font-primary uppercase">Company</h3>
+              <ul className="space-y-4 text-sm">
+                <li>
+                  <Link href="/about" className="hover:underline">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/team" className="hover:underline">
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/career" className="hover:underline">
+                    Career
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:underline">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="hover:underline">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h3 className="font-semibold mb-4 text-xl font-primary uppercase">Support</h3>
+              <ul className="space-y-4 text-sm">
+                <li>
+                  <Link href="/getting-started" className="hover:underline">
+                    Getting Started
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/help-center" className="hover:underline">
+                    Help Center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/server-status" className="hover:underline">
+                    Server Status
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/report-bug" className="hover:underline">
+                    Report a Bug
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/chat-support" className="hover:underline">
+                    Chat Support
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Products */}
+            <div>
+              <h3 className="font-semibold mb-4 text-xl font-primary uppercase">Products</h3>
+              <ul className="space-y-4 text-sm">
+                <li>
+                  <Link href="/features" className="hover:underline">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/review" className="hover:underline">
+                    Review
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/update" className="hover:underline">
+                    Update
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Downloads */}
+            <div>
+              <h3 className="font-semibold mb-4 text-xl font-primary uppercase">Downloads</h3>
+              <ul className="space-y-4 text-sm">
+                <li>
+                  <Link href="/downloads/ios" className="hover:underline">
+                    iOS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/downloads/android" className="hover:underline">
+                    Android
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Subscribe Section */}
+          <div className="lg:col-span-1">
+            <h3 className="font-semibold mb-4 text-md font-primary uppercase">Subscribe to our Newsletter</h3>
+            <p className="text-sm mb-4 leading-6">
+              Subscribe today to receive the latest updates, exclusive content,
+              and valuable insights delivered right to your inbox.
+            </p>
+            <div className="flex">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-4 py-2 w-full bg-gray-800 text-white  focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full font-secondary"
+              />
+            </div>
+            <button className="bg-white text-gray-900 font-medium px-4 py-2 rounded-full mt-5 font-secondary">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col lg:flex-row justify-between items-center">
+          <p className="text-sm mx-10 text-center">
+            &copy; 2024 DigiGrowth. All Rights Reserved | Designed by Laiba Farooq & Developed by Gideon Korbla Hoenyefia
+          </p>
+          <div className="mt-4 lg:mt-0 flex space-x-4 px-12">
+            <Link href="https://facebook.com" aria-label="Facebook">
+              <Facebook className="w-6 h-6 hover:opacity-75" />
+            </Link>
+            <Link href="https://instagram.com" aria-label="Instagram">
+              <Instagram className="w-6 h-6 hover:opacity-75" />
+            </Link>
+            <Link href="https://linkedin.com" aria-label="LinkedIn">
+              <Linkedin className="w-6 h-6 hover:opacity-75" />
+            </Link>
+            <Link href="https://youtube.com" aria-label="YouTube">
+              <Youtube className="w-6 h-6 hover:opacity-75" />
+            </Link>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
